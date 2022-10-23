@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d("MAINACTIVITY", "This is my message")
-
+        Log.d("MAINACTIVITY", "This is my another message")
+        Log.d("MAINACTIVITY", "This is my last message")
+        Log.d("MAINACTIVITY", "This is my final last message")
+        Log.d("MAINACTIVITY", "Experimental Change")
     }
 }
