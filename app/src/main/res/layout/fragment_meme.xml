@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.memeshare.MemeViewModel" />
+        <variable
+            name="MemeFragment"
+            type="com.example.memeshare.MemeFragment" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemeFragment">
+
+
+    <ImageView
+        android:id="@+id/ImageMeme"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/sharebutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:removeimage="@{viewModel.status}"
+        app:imageUrl="@{viewModel.meme.url}"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/StatusImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:memeApiStatus="@{viewModel.status}"
+        app:layout_constraintBottom_toTopOf="@id/sharebutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/sharebutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        android:padding="20dp"
+        android:onClick="@{() -> MemeFragment.sharememe()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        />
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:onClick="@{() -> MemeFragment.nextmeme()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

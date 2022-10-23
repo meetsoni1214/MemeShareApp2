@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MemeShare</string>
+    <string name="share">Share</string>
+    <string name="next">Next</string>
+    <string name="sharememe">Share via</string>
+    <string name="network_error">You\'re offline, Make Sure you have proper Internet Connection</string>
+    <string name="sharingText">Hey Checkout this amazing meme ;) that I got from reddit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
