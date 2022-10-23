@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d("MAINACTIVITY", "This is my message")
-        Hello Everyone How are you??
+        Hello I am using for the first time in my android studio
     }
 }
