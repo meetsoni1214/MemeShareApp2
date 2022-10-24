@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("MAINACTIVITY", "This is my last message")
         Log.d("MAINACTIVITY", "This is my final last message")
         Log.d("MAINACTIVITY", "This is my Change in Experimental Branch")
+        Log.d("MAINACTIVITY", "This is my Change in Experimental Branch again")
+
     }
 }
